@@ -33,10 +33,7 @@ const styles = StyleSheet.create({
   inputs: {
     flex: 1,
     alignItems: 'center',
-    justifyContent: 'center',
-    marginBottom: 24,
-    borderBottomWidth: 1,
-    borderBottomColor: '#ccc',
+    justifyContent: 'center',    
     backgroundColor:'#311b6b'
   },
   inputsImage:{

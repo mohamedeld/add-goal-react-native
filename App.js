@@ -25,8 +25,10 @@ export default function App() {
     setGoals(prev=> prev?.filter(item=> item?.id !== id));
   }
   return (
+    <>
+    <StatusBar style='light'/>
     <View style={styles.container}>
-      <Button title="Add Goal" color={"purple"} onPress={handleOpenModal}/>
+      <View style={styles.homeButton}><Button title="Add Goal" color={"purple"} onPress={handleOpenModal}/></View>
       <GoalInput visible={openModal} addGoal={addGoal} handleCloseModal={handleCloseModal}/>
       
       <View style={styles.goals}>
@@ -47,6 +49,7 @@ export default function App() {
       </View>
       
     </View>
+    </>
   );
 }
 
@@ -57,7 +60,12 @@ const styles = StyleSheet.create({
     paddingHorizontal:16
   },
   
-  
+  homeButton:{
+    borderBottomColor:'#eee',
+    borderBottomWidth:1,
+    paddingBottom:10,
+    marginBottom:20
+  },  
   goals:{
     flex:5
   },
